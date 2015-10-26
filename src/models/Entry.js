@@ -14,5 +14,19 @@
     store.push(attrs)
     return attrs
   }
+  
+  Entry.vm = function() {
+    return {
+      enteredAt: null,
+      volunteers: [Entry.volunteerVM()]
+    }
+  }
+  
+  Entry.volunteerVM = function() {
+    return {
+      name: '',
+      email: ''
+    }
+  }
 
 })()
